@@ -1,0 +1,28 @@
+<main class="lista-vacantes">
+    <h2>Lista de Vacantes</h2>
+
+    {{#if vacantes.length}}
+        {{#each vacantes}}
+            <div class="vacante">
+                <div class="caja">
+                    <h3>AirBNB</h3>
+                    <div class="puesto">Node Developer</div>
+                </div>
+                <div class="caja">
+                    <p class="etiqueta">Ubicación</p>
+                    <p class="nombre">Venezuela</p>
+                </div>
+                <div class="caja">
+                    <p class="etiqueta">Contrato</p>
+                    <p class="nombre contrato">1 año</p>
+                </div>
+                <div class="caja central-vertical">
+                    <a href="/vacantes/{{url}}" class="btn btn-verde">Mas Info</a>
+                </div>
+            </div>
+            <!--vacante-->
+        {{/each}}
+    {{else}}
+    <p>No hay Vacantes</p>
+    {{/if}}
+</main>
